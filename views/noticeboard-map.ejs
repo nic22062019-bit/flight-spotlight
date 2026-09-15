@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +39,7 @@
                         </div>
                         <p>&nbsp;</p>
                         <div class="d-none" id="flight-declarations">
-                            <button id="show-flight-declarations" type="button" class="btn btn-link">Get Flight Declarations</button>
+                            <button id="show-flight-declarations" type="button" class="btn btn-link">Получить декларации полётов</button>
                         </div>
                         
                         <ul class="list-group list-group-flush">
@@ -61,7 +60,7 @@
                                         </h6>
                                     </li>
                                     <% } } else { %>
-                                        <p>No flight declarations found, please select a broader timeframe.</p>
+                                        <p>Декларации не найдены, выберите более широкий период.</p>
                                         <% } } else { %>
                                             <p>No flight declarations found, please select a timeframe.</p>
                                             <% } %>
@@ -96,7 +95,7 @@
                                 </ul>                            
                             <% } } %>
                             <%if (data.successful !='NA' ) { %>
-                                <p class="text-end"><a href="#" onclick="show_all_declarations()">Highlight all declarations</a></p>                 
+                                <p class="text-end"><a href="#" onclick="show_all_declarations()">Подсветить все декларации</a></p>                 
                             <% }  %>
                
             </div>  
@@ -122,9 +121,9 @@
         myAttrControl.setPrefix('<a href="https://leafletjs.com/">Leaflet</a>');
         // Adds the basemap tiles to your web map
         // Additional providers are available at: https://leaflet-extras.github.io/leaflet-providers/preview/
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        
         maxZoom: 21,
         dragging: false,
         }).addTo(map);
