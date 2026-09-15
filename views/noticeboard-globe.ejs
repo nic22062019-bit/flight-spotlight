@@ -198,9 +198,8 @@
         
         
         const mapbox = new Cesium.ImageryLayer.fromProviderAsync(
-          new Cesium.MapboxImageryProvider({
-              mapId: 'mapbox.satellite',
-              accessToken: '<%= mapbox_key %>'
+          new Cesium.OpenStreetMapImageryProvider({
+              url: 'https://tile.openstreetmap.org/'
           })
         );
         
